@@ -10,6 +10,50 @@
 </head>
 <body>
 
+<div class="window preferences-window">
+    <div class="title-bar">
+        <div class="title-bar-text">Preferences</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body">
+        <menu role="tablist">
+            <button aria-selected="true" aria-controls="language">Language</button>
+            <button aria-controls="variable">Variable</button>
+            <button aria-controls="line-ending-spacing">Line ending/spacing</button>
+        </menu>
+        <article role="tabpanel" id="language">
+            <label>Select the desired language where the string will be used. The string will be generated using the appropriate syntax.</label>
+            <br/><br/>
+
+            <fieldset>
+                <legend>Language</legend>
+                <div class="field-row">
+                    <input id="radio29" type="radio" name="fieldset-example2">
+                    <label for="radio29">Java</label>
+                </div>
+                <div class="field-row">
+                    <input id="radio30" type="radio" name="fieldset-example2">
+                    <label for="radio30">C#</label>
+                </div>
+                <div class="field-row">
+                    <input id="radio31" type="radio" name="fieldset-example2">
+                    <label for="radio31">SQL</label>
+                </div>
+            </fieldset>
+        </article>
+
+        <article role="tabpanel" hidden id="variable">
+        </article>
+
+        <article role="tabpanel" hidden id="line-ending-spacing">
+        </article>
+    </div>
+</div>
+
 <div class="window input-output-window">
     <div class="title-bar">
         <div class="title-bar-text">Input/Output string</div>
@@ -46,6 +90,5 @@
         </article>
     </div>
 </div>
-
 </body>
 </html>
