@@ -1,0 +1,37 @@
+<div class="window input-output-text-window">
+  <div class="title-bar">
+    <div class="title-bar-text">Input/Output string</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <article role="tabpanel">
+      <div class="input-output-text-window_container">
+        <fieldset>
+          <legend>Input string</legend>
+
+          <div class="field-row-stacked input-output-text-window_container_text">
+            <label for="input-string"></label>
+            <textarea id="input-string" rows="10" >{{inputText}}</textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Output string</legend>
+
+          <div class="field-row-stacked input-output-text-window_container_text">
+            <label for="output-string"></label>
+            <textarea disabled id="output-string" rows="10">{{outputText}}</textarea>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="input-output-text-window_container_buttons">
+        <button (click)="this.generate()">Generate</button>
+        <button (click)="this.clear()">Clear</button>
+      </div>
+    </article>
+  </div>
+</div>
