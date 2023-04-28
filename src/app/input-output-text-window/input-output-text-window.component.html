@@ -15,7 +15,7 @@
 
           <div class="field-row-stacked input-output-text-window_container_text">
             <label for="input-string"></label>
-            <textarea id="input-string" rows="10" >{{inputText}}</textarea>
+            <textarea id="input-string" rows="20" [formControl]="inputText">{{inputText}}</textarea>
           </div>
         </fieldset>
         <fieldset>
@@ -23,7 +23,7 @@
 
           <div class="field-row-stacked input-output-text-window_container_text">
             <label for="output-string"></label>
-            <textarea disabled id="output-string" rows="10">{{outputText}}</textarea>
+            <textarea disabled id="output-string" rows="20">{{outputText}}</textarea>
           </div>
         </fieldset>
       </div>
