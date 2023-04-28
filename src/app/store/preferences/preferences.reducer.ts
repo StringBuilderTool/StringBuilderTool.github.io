@@ -1,5 +1,5 @@
 import {createFeature, createReducer, on} from "@ngrx/store";
-import {PreferencesState} from "../../types/store/PreferencesState";
+import {PreferencesState} from "../types/PreferencesState";
 import * as PreferencesActions from './preferences.actions';
 import {LanguageOptionEnum} from "../../types/LanguageOption";
 

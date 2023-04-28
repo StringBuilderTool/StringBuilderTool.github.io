@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from "@ngrx/store";
-import {PreferencesState} from "./types/store/PreferencesState";
+import {PreferencesState} from "./store/types/PreferencesState";
 import {selectPreferencesFull} from "./store/preferences/preferences.selector";
 import {LanguageOptionEnum} from "./types/LanguageOption";
 
