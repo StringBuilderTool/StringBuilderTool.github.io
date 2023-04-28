@@ -1,20 +1,25 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { PreferencesWindowComponent } from './preferences-window/preferences-window.component';
-import { InputOutputTextWindowComponent } from './input-output-text-window/input-output-text-window.component';
+import {AppComponent} from './app.component';
+import {InputOutputTextWindowComponent} from './input-output-text-window/input-output-text-window.component';
+import {PreferencesWindowModule} from "./preferences-window/preferences-window.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {StoreModule} from "@ngrx/store";
+import {preferencesFeature} from "./store/preferences/preferences.reducer";
 
 @NgModule({
   declarations: [
     AppComponent,
-    PreferencesWindowComponent,
-    InputOutputTextWindowComponent
+    InputOutputTextWindowComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule, PreferencesWindowModule, FormsModule, ReactiveFormsModule,
+    StoreModule.forRoot({}),
+    StoreModule.forFeature(preferencesFeature)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

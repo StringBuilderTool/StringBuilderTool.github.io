@@ -1,0 +1,16 @@
+<label>Select the desired language where the string will be used. The string will be generated using the appropriate
+  syntax.</label>
+<br/><br/>
+
+<fieldset>
+  <legend>Languages</legend>
+    <ng-container *ngFor="let languageOption of languageOptions">
+      <div class="field-row">
+        <input id="{{languageOption.id}}" [formControl]="selectedLanguageOptionFormControl"
+               (change)="changeValue()"
+               value="{{languageOption.id}}"
+               type="radio" name="language-fieldset">
+        <label for="{{languageOption.id}}">{{languageOption.name}}</label>
+      </div>
+    </ng-container>
+</fieldset>

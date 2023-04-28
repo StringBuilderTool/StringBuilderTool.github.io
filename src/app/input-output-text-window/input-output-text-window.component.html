@@ -15,7 +15,7 @@
 
           <div class="field-row-stacked input-output-text-window_container_text">
             <label for="input-string"></label>
-            <textarea id="input-string" rows="10" >Place your input string here...</textarea>
+            <textarea id="input-string" rows="10" >{{inputText}}</textarea>
           </div>
         </fieldset>
         <fieldset>
@@ -23,14 +23,14 @@
 
           <div class="field-row-stacked input-output-text-window_container_text">
             <label for="output-string"></label>
-            <textarea disabled id="output-string" rows="10">Your generated string will appear here...</textarea>
+            <textarea disabled id="output-string" rows="10">{{outputText}}</textarea>
           </div>
         </fieldset>
       </div>
 
       <div class="input-output-text-window_container_buttons">
-        <button>Generate</button>
-        <button>Clear all</button>
+        <button (click)="this.generate()">Generate</button>
+        <button (click)="this.clear()">Clear</button>
       </div>
     </article>
   </div>
