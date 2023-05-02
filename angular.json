@@ -101,6 +101,17 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "message": "Deploying from angular-cli-ghpages",
+            "branch": "gh-pages",
+            "baseHref": "https://stringbuildertool.github.io",
+            "repo": "https://github.com/StringBuilderTool/string-builder-tool.io.git",
+            "name": "Isahann Hanacleto",
+            "email": "isahanacleto@gmail.com"
+          },
         }
       }
     }
