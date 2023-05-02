@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {GeneratorService} from "../service/generator.service";
 import {FormControl} from "@angular/forms";
+import {Clipboard} from "@angular/cdk/clipboard";
 
 @Component({
   selector: 'app-input-output-text-window',
@@ -11,7 +12,8 @@ export class InputOutputTextWindowComponent implements OnInit {
   outputText: string;
   inputText: FormControl<string | null> = new FormControl<string>('Place your input string here...');
 
-  constructor(private readonly generatorService: GeneratorService) {
+  constructor(private readonly generatorService: GeneratorService,
+              private readonly clipboard: Clipboard) {
     this.outputText = 'Your generated string will appear here...'
   }
 
@@ -26,5 +28,9 @@ export class InputOutputTextWindowComponent implements OnInit {
 
   generate() {
     this.outputText = this.generatorService.generateString(this.inputText.value!);
+  }
+
+  copyToClipboard() {
+    this.clipboard.copy(this.outputText);
   }
 }

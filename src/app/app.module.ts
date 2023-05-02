@@ -7,6 +7,7 @@ import {PreferencesWindowModule} from "./preferences-window/preferences-window.m
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {StoreModule} from "@ngrx/store";
 import {preferencesFeature} from "./store/preferences/preferences.reducer";
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {preferencesFeature} from "./store/preferences/preferences.reducer";
   imports: [
     BrowserModule, PreferencesWindowModule, FormsModule, ReactiveFormsModule,
     StoreModule.forRoot({}),
-    StoreModule.forFeature(preferencesFeature)
+    StoreModule.forFeature(preferencesFeature),
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
