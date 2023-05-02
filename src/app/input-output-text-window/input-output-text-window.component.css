@@ -7,6 +7,9 @@
 .input-output-text-window fieldset {
   margin: 15px;
 }
+.input-output-text-window_window-title-icon {
+  margin: 5px -1250px 5px 5px;
+}
 .input-output-text-window_container {
   display: flex;
   flex-direction: row;
@@ -21,6 +24,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.input-output-text-window_container_buttons_label-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.input-output-text-window_container_buttons_button-icon {
+  padding: 3px 5px 3px 0px;
 }
 .input-output-text-window_container_buttons button {
   margin: 5px;

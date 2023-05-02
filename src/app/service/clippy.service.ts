@@ -14,6 +14,7 @@ export class ClippyService {
       failCb: (err) => console.log(err),
       successCb: (agent) => {
         agent.show(false);
+        agent.moveTo(1500, 200, 0);
         this._agent = agent;
       }
     });

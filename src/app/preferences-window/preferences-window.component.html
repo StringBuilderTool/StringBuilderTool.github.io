@@ -1,7 +1,9 @@
 <div class="window preferences-window">
   <div class="title-bar">
+    <img
+      ngSrc="assets/images/icons/preferences.png"
+      alt="" height="16" width="16" class="preferences-window_window-title-icon"/>
     <div class="title-bar-text">{{windowTitleBar}}</div>
-
     <div class="title-bar-controls">
       <ng-container *ngFor="let button of windowButtons">
         <button [attr.aria-label]="button"></button>
