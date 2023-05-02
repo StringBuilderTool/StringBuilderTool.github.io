@@ -2,8 +2,10 @@ import {Injectable} from '@angular/core';
 import {PreferencesState} from "../store/types/PreferencesState";
 import {Store} from "@ngrx/store";
 import {LanguageOptionEnum} from "../types/LanguageOption";
-import {JavaGeneratorService} from "./java-generator.service";
+import {JavaGeneratorService} from "./generators/java-generator.service";
 import {selectPreferencesFull} from "../store/preferences/preferences.selector";
+import {CppGeneratorService} from "./generators/cpp-generator.service";
+import {CsharpGeneratorService} from "./generators/csharp-generator.service";
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +16,15 @@ export class GeneratorService {
 
   private readonly languageGeneratorMap: Map<LanguageOptionEnum, Function> = new Map<LanguageOptionEnum, Function>([
     [LanguageOptionEnum.JAVA, this.javaGeneratorService.generate],
-    [LanguageOptionEnum.CSHARP, (a: any) => a],
-    [LanguageOptionEnum.CPP, (a: any) => a],
+    [LanguageOptionEnum.CSHARP, this.csharpGeneratorService.generate],
+    [LanguageOptionEnum.CPP, this.cppGeneratorService.generate],
   ]);
 
   constructor(
     private readonly store: Store<PreferencesState>,
-    private readonly javaGeneratorService: JavaGeneratorService
+    private readonly javaGeneratorService: JavaGeneratorService,
+    private readonly csharpGeneratorService: CsharpGeneratorService,
+    private readonly cppGeneratorService: CppGeneratorService
   ) {
     this.store.select(selectPreferencesFull).subscribe(value => {
       this.preferences = value;
