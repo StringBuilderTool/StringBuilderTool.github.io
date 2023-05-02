@@ -4,6 +4,7 @@ import {FormControl} from "@angular/forms";
 import {Store} from "@ngrx/store";
 import * as PreferencesActions from '../../store/preferences/preferences.actions';
 import {LanguageUpdate} from "../../store/preferences/preferences.actions";
+import {selectPreferencesFull} from "../../store/preferences/preferences.selector";
 
 interface LanguageOption {
   id: number,
@@ -27,10 +28,9 @@ export class LanguageOptionsComponent implements OnInit {
     id: LanguageOptionEnum.CPP,
     name: 'C++'
   }];
-  selectedLanguageOptionFormControl: FormControl = new FormControl<number>(LanguageOptionEnum.JAVA);
+  selectedLanguageOptionFormControl: FormControl = new FormControl<number>(1);
 
   constructor(private readonly store: Store) {
-    // Empty
   }
 
   public ngOnInit(): void {

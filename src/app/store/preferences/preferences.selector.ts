@@ -7,9 +7,5 @@ export const selectPreferences = createFeatureSelector<PreferencesState>(prefere
 
 export const selectPreferencesFull = createSelector(
   selectPreferences,
-  (state: PreferencesState) => {
-    console.log(state);
-
-    return state;
-  }
+  (state: PreferencesState) => state
 );

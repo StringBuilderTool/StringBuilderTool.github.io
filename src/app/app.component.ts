@@ -12,18 +12,9 @@ import {LanguageOptionEnum} from "./types/LanguageOption";
 export class AppComponent implements OnInit {
   title = 'string-builder-tool';
 
-  option: LanguageOptionEnum | undefined;
-
-  constructor(private store: Store<PreferencesState>) {
-    this.store.select(selectPreferencesFull).subscribe(value => {
-      console.log(value);
-
-      this.option = value.language;
-    });
+  constructor() {
   }
 
   ngOnInit() {
   }
-
-  protected readonly LanguageOptionEnum = LanguageOptionEnum;
 }
