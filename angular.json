@@ -108,7 +108,7 @@
             "message": "Deploying from angular-cli-ghpages",
             "branch": "gh-pages",
             "baseHref": "https://stringbuildertool.github.io",
-            "repo": "https://github.com/StringBuilderTool/string-builder-tool.io.git",
+            "repo": "https://github.com/StringBuilderTool/string-builder-tool.github.io.git",
             "name": "Isahann Hanacleto",
             "email": "isahanacleto@gmail.com"
           },
