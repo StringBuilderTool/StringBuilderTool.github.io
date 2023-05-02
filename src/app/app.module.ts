@@ -8,6 +8,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {StoreModule} from "@ngrx/store";
 import {preferencesFeature} from "./store/preferences/preferences.reducer";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule, PreferencesWindowModule, FormsModule, ReactiveFormsModule,
     StoreModule.forRoot({}),
     StoreModule.forFeature(preferencesFeature),
-    NoopAnimationsModule
+    NoopAnimationsModule, NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

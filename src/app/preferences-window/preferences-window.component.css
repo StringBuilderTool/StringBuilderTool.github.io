@@ -2,5 +2,8 @@
   width: 400px;
   margin: 50px;
 }
+.preferences-window_window-title-icon {
+  margin: 5px -195px 5px 5px;
+}
 
 /*# sourceMappingURL=preferences-window.component.css.map */

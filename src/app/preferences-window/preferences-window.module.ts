@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {PreferencesWindowComponent} from "./preferences-window.component";
 import {LanguageOptionsComponent} from "./language-options/language-options.component";
 import {VariableOptionsComponent} from "./variable-options/variable-options.component";
@@ -12,10 +12,11 @@ import {ReactiveFormsModule} from "@angular/forms";
     LanguageOptionsComponent,
     VariableOptionsComponent,
     LineEndingSpacingOptionsComponent],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        NgOptimizedImage
+    ],
   exports: [PreferencesWindowComponent]
 })
 export class PreferencesWindowModule {

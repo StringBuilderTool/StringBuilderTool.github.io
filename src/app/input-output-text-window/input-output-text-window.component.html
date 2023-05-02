@@ -1,5 +1,8 @@
 <div class="window input-output-text-window">
   <div class="title-bar">
+    <img
+      ngSrc="assets/images/icons/input-output.png"
+      alt="" height="16" width="16" class="input-output-text-window_window-title-icon"/>
     <div class="title-bar-text">Input/Output string</div>
     <div class="title-bar-controls">
       <button aria-label="Minimize"></button>
@@ -29,9 +32,33 @@
       </div>
 
       <div class="input-output-text-window_container_buttons">
-        <button (click)="this.generate()">Generate</button>
-        <button (click)="this.copyToClipboard()">Copy output to clipboard</button>
-        <button (click)="this.clear()">Clear</button>
+        <button (click)="this.generate()">
+          <div class="input-output-text-window_container_buttons_label-container">
+
+            <img ngSrc="assets/images/icons/generate.png"
+                 class="input-output-text-window_container_buttons_button-icon" alt="" width="20" height="20"/>
+            Generate
+
+          </div>
+        </button>
+        <button (click)="this.copyToClipboard()">
+          <div class="input-output-text-window_container_buttons_label-container">
+
+            <img ngSrc="assets/images/icons/copy.png"
+                 class="input-output-text-window_container_buttons_button-icon" alt="" width="20" height="20"/>
+            Copy output to clipboard
+
+          </div>
+        </button>
+        <button (click)="this.clear()">
+          <div class="input-output-text-window_container_buttons_label-container">
+
+            <img ngSrc="assets/images/icons/clear.png"
+                 class="input-output-text-window_container_buttons_button-icon" alt="" width="20" height="20"/>
+            Clear
+
+          </div>
+        </button>
       </div>
     </article>
   </div>
